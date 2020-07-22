@@ -1,0 +1,22 @@
+<div>
+    <table  class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Image</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let items of listItems;let i=index">
+                <td>{{items.itemName}}</td>
+                <td>{{items.itemPrice}}</td>
+                <td><img src="{{items.itemImg}}" style="width:80%;height:60%"></td>
+                <td><button (click)="editItem()">Edit</button></td>
+                <td><button (click)="deleteItem(items)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

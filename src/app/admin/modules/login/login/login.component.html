@@ -1,0 +1,9 @@
+<form class="form-signin mt-5" [formGroup]="profileForm" (submit)="loginUser()">
+    <h1 class="h3 mb-3 font-weight-normal mt-5 text-center">Please sign in</h1>
+    <div class class="text-danger text-center">{{errorMsg}}</div>
+    <label for="" class="sr-only" >Email address</label>
+    <input type="text" id="" class="form-control"  formControlName="email" id="email" placeholder="Email address" >
+    <label for="" class="sr-only">Password</label>
+    <input type="password" id="" class="form-control"  formControlName="password" placeholder="Password" >
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!profileForm.valid">Sign in</button>
+  </form>   
